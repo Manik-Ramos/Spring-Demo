@@ -9,14 +9,25 @@
 
 	
     <!-- Define your beans here -->
- 	<bean id="hockeyCoach"
- 		class="com.legitboss.springdemo.HockeyCoachImpl">	 		
+    
+	<bean id="fortuneService" class="com.legitboss.springdemo.FortuneServiceImpl"></bean> 	
+ 	
+ 	<!-- Define your dependencies here -->
+ 	
+ 	<bean id="baseballCoach" class="com.legitboss.springdemo.BaseballCoachImpl">
+ 		<constructor-arg ref="fortuneService" />	 		
  	</bean>
  	
- 	<bean id="baseballCoach"
- 		class="com.legitboss.springdemo.BaseballCoachImpl">	 		
+ 	<bean id="hockeyCoach" class="com.legitboss.springdemo.HockeyCoachImpl">
+ 		<constructor-arg ref="fortuneService"/>
  	</bean>
-
+ 	
+ 	<bean id="cricketCoach" class="com.legitboss.springdemo.CricketCoachImpl">
+ 		<property name="fortuneServiceDao" ref="fortuneService"/>
+ 		<property name="email" value="theBestCoach@cricketacademy.com"/>
+ 		<property name="experience" value="20years"/>
+ 	</bean>
+ 	
 </beans>
 
 
