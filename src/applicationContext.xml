@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- Define your property files here -->
+	<context:property-placeholder location="classpath:sports.properties" />
 	
     <!-- Define your beans here -->
     
@@ -24,8 +26,8 @@
  	
  	<bean id="cricketCoach" class="com.legitboss.springdemo.CricketCoachImpl">
  		<property name="fortuneServiceDao" ref="fortuneService"/>
- 		<property name="email" value="theBestCoach@cricketacademy.com"/>
- 		<property name="experience" value="20years"/>
+ 		<property name="email" value="${cricketCoachEmail}"/>
+ 		<property name="experience" value="${cricketCoachExperience}"/>
  	</bean>
  	
 </beans>
