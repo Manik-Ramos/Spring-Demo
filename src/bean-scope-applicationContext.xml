@@ -17,7 +17,7 @@
  		<constructor-arg ref="fortuneService" />	 		
  	</bean>
  	
- 	<bean id="hockeyCoach" class="com.legitboss.springdemo.HockeyCoachImpl">
+ 	<bean id="hockeyCoach" class="com.legitboss.springdemo.HockeyCoachImpl" scope="prototype">
  		<constructor-arg ref="fortuneService"/>
  	</bean>
  	 	

@@ -13,10 +13,19 @@ public class BeanScopeDemo {
 		BaseballCoachImpl baseBallCoach2 = context.getBean("baseballCoach",BaseballCoachImpl.class);
 		
 		boolean resultOfScopes = (baseBallCoach1 == baseBallCoach2);
+			
+		if(resultOfScopes){
+			System.out.println("***The scopes are same as a result of Singleton scope***");
+			System.out.println("***Their references are:\n");
+			System.out.println("Reference of baseBallCoach1: "+baseBallCoach1);
+			System.out.println("Reference of baseBallCoach2: "+baseBallCoach2);
+		} else {
+			System.out.println("***The scopes are same as a result of Prototype scope***");
+			System.out.println("***Their references are:\n");
+			System.out.println("Reference of baseBallCoach1: "+baseBallCoach1);
+			System.out.println("Reference of baseBallCoach2: "+baseBallCoach2);
+		}
 		
-		System.out.println("Are the scopes same? : "+resultOfScopes);
-		System.out.println("Reference of baseBallCoach1: "+baseBallCoach1);
-		System.out.println("Reference of baseBallCoach2: "+baseBallCoach2);
 		
 	}
 
