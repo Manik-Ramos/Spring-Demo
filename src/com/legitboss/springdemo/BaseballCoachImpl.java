@@ -21,4 +21,12 @@ public class BaseballCoachImpl implements CoachDao{
 		//using dependency helper to output values
 		return this.fortuneService.getFortune()+" Baseball Player";
 	}
+	
+	public void initMethod() {
+		System.out.println("Init method operations");
+	}
+	
+	public void destroyMethod() {
+		System.out.println("Destroy method operations");
+	}
 }

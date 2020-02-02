@@ -24,8 +24,7 @@ public class BeanScopeDemo {
 			System.out.println("Their references are:\n");
 			System.out.println("Reference of baseBallCoach1: "+baseBallCoach1);
 			System.out.println("Reference of baseBallCoach2: "+baseBallCoach2);
-		}
-		
+		}		
 		
 	}
 
