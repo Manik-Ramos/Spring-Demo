@@ -16,12 +16,12 @@ public class BeanScopeDemo {
 			
 		if(resultOfScopes){
 			System.out.println("***The scopes are same as a result of Singleton scope***");
-			System.out.println("***Their references are:\n");
+			System.out.println("Their references are:\n");
 			System.out.println("Reference of baseBallCoach1: "+baseBallCoach1);
 			System.out.println("Reference of baseBallCoach2: "+baseBallCoach2);
 		} else {
 			System.out.println("***The scopes are same as a result of Prototype scope***");
-			System.out.println("***Their references are:\n");
+			System.out.println("Their references are:\n");
 			System.out.println("Reference of baseBallCoach1: "+baseBallCoach1);
 			System.out.println("Reference of baseBallCoach2: "+baseBallCoach2);
 		}

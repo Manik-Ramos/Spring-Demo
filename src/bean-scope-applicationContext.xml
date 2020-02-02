@@ -8,11 +8,9 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
-    
 	<bean id="fortuneService" class="com.legitboss.springdemo.FortuneServiceImpl"></bean> 	
  	
- 	<!-- Define your dependencies here -->
- 	
+ 	<!-- Define your dependencies here -->	
  	<bean id="baseballCoach" class="com.legitboss.springdemo.BaseballCoachImpl" scope="prototype">
  		<constructor-arg ref="fortuneService" />	 		
  	</bean>
